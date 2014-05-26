@@ -1,3 +1,26 @@
 .wiki-result {
 	margin-top: 20px;
 }
+.wiki-graph-elem {
+	width: 150px;
+	/*height: 150px;*/
+	/*float: left;*/
+	margin: 10px;
+	border: 1px solid #bbb;
+}
+.wiki-graph-elem .inner {
+	padding: 20px;
+}
+.wiki-graph-elem .title {
+	border-bottom: 1px solid #bbb;
+	text-align: center;
+}
+.wiki-graph-elem img {
+	max-width: 75px;
+	max-height: 75px;
+}
+.wiki-graph-elem .links {
+	padding-top: 5px;
+	margin-top: 5px;
+	border-top: 1px solid #bbb;
+}

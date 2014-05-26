@@ -1,8 +1,8 @@
 <section data-ng-controller="WikilineController">
-    <div class="page-header">
-        <h1>Wikilines</h1>
-    </div>
-    <div class="col-md-12">
+    <div class="col-md-8">
+	    <div class="page-header">
+	        <h1>Wikilines</h1>
+	    </div>
 	    <div ng-hide="started">
 			Type wikipedia search
 			<input ng-model="query" ui-keypress="{13:'searchWiki()'}">
@@ -14,4 +14,17 @@
 			<div ng-bind-html="wikihtml" ng-click="doClick($event)"></div>
 		</div>
     </div>
+	<div class="col-md-4">
+		<div class="wiki-graph-elem" ng-repeat="wikiline in wikilines | reverse">
+			<div class="title">{{wikiline.name}}</div>
+			<div class="inner">
+				<img ng-src="{{wikiline.imageUrl}}"/>
+				<div class="links" ng-show="{{wikiline.links}}">
+					<div ng-repeat="link in wikiline.links">
+						{{link}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
